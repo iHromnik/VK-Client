@@ -7,13 +7,79 @@
 
 import UIKit
 
+
+
+
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var usernameTextField: UITextField!
+    
+    @IBOutlet weak var passwordtextField: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let tapGR = UITapGestureRecognizer(target: self, action: #selector(hideScrean))
+        view.addGestureRecognizer(tapGR)
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
     }
-
-
+    
+    @objc func hideScrean() {
+        view.endEditing(true)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+       
+        NotificationCenter.default.addObserver(self, selector: #selector(willShowKeyBoard), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(willHideKeyBoard), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+    }
+    
+    @objc func willShowKeyBoard(_ notification: Notification) {
+        guard let info =  notification.userInfo as NSDictionary?,
+              let keyboardSize = info.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as? NSValue else {return}
+        let keyboardHeight = keyboardSize.cgRectValue.size.height
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight, right: 0)
+    }
+    
+    @objc func willHideKeyBoard(_ notification: Notification) {
+        scrollView.contentInset = .zero
+    }
+    
+    
+    
+//    @objc func keyboardWillShow(notification: Notification) {
+//            guard let kbSize =  notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {return}
+//            let insets = UIEdgeInsets(top: 0, left: 0, bottom: kbSize.size.height, right: 0)
+//            scrollView.contentInset = insets
+//        }
+//
+//    @objc func keyboardWillHide(notification: Notification) {
+//
+//            let insets = UIEdgeInsets.zero
+//            scrollView.contentInset = insets
+//        }
+    
+    
+    @IBAction func loginButten(_ sender: Any) {
+        guard let username = usernameTextField.text,
+              let password = passwordtextField.text,
+              username == "",
+              password == "" else {
+            show(mesage: "Error password")
+            return}
+        
+        performSegue(withIdentifier: "Login", sender: nil)
+    }
+    
 }
 

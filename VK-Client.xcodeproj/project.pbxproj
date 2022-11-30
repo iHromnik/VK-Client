@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3093A09D2937E91800178491 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093A09C2937E91800178491 /* UIViewController + Extension.swift */; };
 		30F4A8A92930E9BE00BCC532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */; };
 		30F4A8AB2930E9BE00BCC532 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8AA2930E9BE00BCC532 /* SceneDelegate.swift */; };
 		30F4A8AD2930E9BE00BCC532 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8AC2930E9BE00BCC532 /* LoginViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3093A09C2937E91800178491 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		30F4A8A52930E9BE00BCC532 /* VK-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F4A8AA2930E9BE00BCC532 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */,
 				30F4A8AA2930E9BE00BCC532 /* SceneDelegate.swift */,
 				30F4A8AC2930E9BE00BCC532 /* LoginViewController.swift */,
+				3093A09C2937E91800178491 /* UIViewController + Extension.swift */,
 				30F4A8AE2930E9BE00BCC532 /* Main.storyboard */,
 				30F4A8B12930E9C000BCC532 /* Assets.xcassets */,
 				30F4A8B32930E9C000BCC532 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				30F4A8AD2930E9BE00BCC532 /* LoginViewController.swift in Sources */,
 				30F4A8A92930E9BE00BCC532 /* AppDelegate.swift in Sources */,
+				3093A09D2937E91800178491 /* UIViewController + Extension.swift in Sources */,
 				30F4A8AB2930E9BE00BCC532 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
