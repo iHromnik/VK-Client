@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300DAFE3293B63A000287535 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DAFE2293B63A000287535 /* FriendsTableViewController.swift */; };
+		300DAFE5293B657600287535 /* FriendTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DAFE4293B657600287535 /* FriendTableCell.swift */; };
+		300DAFE7293B675400287535 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DAFE6293B675400287535 /* Friend.swift */; };
+		300DAFE9293B83D900287535 /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DAFE8293B83D900287535 /* FriendCollectionViewController.swift */; };
+		300DAFEB293B84D700287535 /* FriendCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300DAFEA293B84D700287535 /* FriendCollectionCell.swift */; };
 		3093A09D2937E91800178491 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093A09C2937E91800178491 /* UIViewController + Extension.swift */; };
 		30F4A8A92930E9BE00BCC532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */; };
 		30F4A8AB2930E9BE00BCC532 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8AA2930E9BE00BCC532 /* SceneDelegate.swift */; };
@@ -37,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		300DAFE2293B63A000287535 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		300DAFE4293B657600287535 /* FriendTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableCell.swift; sourceTree = "<group>"; };
+		300DAFE6293B675400287535 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		300DAFE8293B83D900287535 /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
+		300DAFEA293B84D700287535 /* FriendCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionCell.swift; sourceTree = "<group>"; };
 		3093A09C2937E91800178491 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		30F4A8A52930E9BE00BCC532 /* VK-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,10 +88,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		300DAFEC293B893800287535 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */,
+				30F4A8AA2930E9BE00BCC532 /* SceneDelegate.swift */,
+				30F4A8B12930E9C000BCC532 /* Assets.xcassets */,
+				30F4A8B32930E9C000BCC532 /* LaunchScreen.storyboard */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
+		300DAFED293B896400287535 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				30F4A8AC2930E9BE00BCC532 /* LoginViewController.swift */,
+				300DAFE2293B63A000287535 /* FriendsTableViewController.swift */,
+				300DAFE8293B83D900287535 /* FriendCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		300DAFEE293B897500287535 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3093A09C2937E91800178491 /* UIViewController + Extension.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		300DAFEF293B898400287535 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				300DAFE4293B657600287535 /* FriendTableCell.swift */,
+				300DAFEA293B84D700287535 /* FriendCollectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		300DAFF0293B899D00287535 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				300DAFE6293B675400287535 /* Friend.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		30F4A89C2930E9BE00BCC532 = {
 			isa = PBXGroup;
 			children = (
 				30F4A8A72930E9BE00BCC532 /* VK-Client */,
+				30F4A8B62930E9C000BCC532 /* Info.plist */,
 				30F4A8BE2930E9C000BCC532 /* VK-ClientTests */,
 				30F4A8C82930E9C000BCC532 /* VK-ClientUITests */,
 				30F4A8A62930E9BE00BCC532 /* Products */,
@@ -101,14 +158,12 @@
 		30F4A8A72930E9BE00BCC532 /* VK-Client */ = {
 			isa = PBXGroup;
 			children = (
-				30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */,
-				30F4A8AA2930E9BE00BCC532 /* SceneDelegate.swift */,
-				30F4A8AC2930E9BE00BCC532 /* LoginViewController.swift */,
-				3093A09C2937E91800178491 /* UIViewController + Extension.swift */,
+				300DAFEC293B893800287535 /* Resourse */,
+				300DAFED293B896400287535 /* Controllers */,
+				300DAFEE293B897500287535 /* Helper */,
+				300DAFEF293B898400287535 /* View */,
+				300DAFF0293B899D00287535 /* Model */,
 				30F4A8AE2930E9BE00BCC532 /* Main.storyboard */,
-				30F4A8B12930E9C000BCC532 /* Assets.xcassets */,
-				30F4A8B32930E9C000BCC532 /* LaunchScreen.storyboard */,
-				30F4A8B62930E9C000BCC532 /* Info.plist */,
 			);
 			path = "VK-Client";
 			sourceTree = "<group>";
@@ -262,9 +317,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F4A8AD2930E9BE00BCC532 /* LoginViewController.swift in Sources */,
+				300DAFE7293B675400287535 /* Friend.swift in Sources */,
+				300DAFE9293B83D900287535 /* FriendCollectionViewController.swift in Sources */,
 				30F4A8A92930E9BE00BCC532 /* AppDelegate.swift in Sources */,
 				3093A09D2937E91800178491 /* UIViewController + Extension.swift in Sources */,
+				300DAFEB293B84D700287535 /* FriendCollectionCell.swift in Sources */,
+				300DAFE5293B657600287535 /* FriendTableCell.swift in Sources */,
 				30F4A8AB2930E9BE00BCC532 /* SceneDelegate.swift in Sources */,
+				300DAFE3293B63A000287535 /* FriendsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
