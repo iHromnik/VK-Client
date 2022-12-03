@@ -11,18 +11,17 @@ class FriendsTableViewController: UITableViewController {
     
     
     
-    var friends = [
-        Friend(name: "Алексей Макаров", avatar: UIImage.init(named: "AMava")),
-        Friend(name: "Павел Мосейчук", avatar: UIImage.init(named: "PMava")),
-        Friend(name: "Роман Шехоткин", avatar: UIImage.init(named: "RSava")),
-        Friend(name: "Надежда Зименко", avatar: UIImage.init(named: "NZava")),
-        Friend(name: "Николай Маркин", avatar: UIImage.init(named: "NMava")),
-        Friend(name: "Ольга Тодоратьева", avatar: UIImage.init(named: "OTava")),
-        Friend(name: "Артем Рапацевич", avatar: UIImage.init(named: "ARava")),
-        Friend(name: "Виталий Виноградов", avatar: UIImage.init(named: "VVava")),
-        Friend(name: "Сергей Голубенко", avatar: UIImage.init(named: "SGava")),
-        Friend(name: "Сергей Щербаков", avatar: UIImage.init(named: "SSava")),
-        Friend(name: "Павел Мосейчук", avatar: UIImage.init(named: "PMava"))
+    let friends = [
+        Friend(name: "Алексей Макаров", avatar: UIImage.init(named: "AMava"), image: UIImage(named: "AM1")),
+        Friend(name: "Павел Мосейчук", avatar: UIImage.init(named: "PMava"), image: UIImage(named: "PM1")),
+        Friend(name: "Роман Шехоткин", avatar: UIImage.init(named: "RSava"), image: UIImage(named: "RS1")),
+        Friend(name: "Надежда Зименко", avatar: UIImage.init(named: "NZava"), image: UIImage(named: "NZ1")),
+        Friend(name: "Николай Маркин", avatar: UIImage.init(named: "NMava"), image: UIImage(named: "NM1")),
+        Friend(name: "Ольга Тодоратьева", avatar: UIImage.init(named: "OTava"), image: UIImage(named: "OT1")),
+        Friend(name: "Артем Рапацевич", avatar: UIImage.init(named: "ARava"), image: UIImage(named: "AR1")),
+        Friend(name: "Виталий Виноградов", avatar: UIImage.init(named: "VVava"), image: UIImage(named: "VV1")),
+        Friend(name: "Сергей Голубенко", avatar: UIImage.init(named: "SGava"), image: UIImage(named: "SG1")),
+        Friend(name: "Сергей Щербаков", avatar: UIImage.init(named: "SSava"), image: UIImage(named: "SS1"))
     ]
     
     
@@ -62,50 +61,14 @@ class FriendsTableViewController: UITableViewController {
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "PhotoFriend",
+           let destinationVC = segue.destination as? FriendCollectionViewController,
+           let indexPath = tableView.indexPathForSelectedRow
+        {
+            destinationVC.photo = friends[indexPath.row].image
+
+        }
     }
-    */
 
 }

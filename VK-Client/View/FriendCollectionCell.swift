@@ -10,4 +10,5 @@ import UIKit
 class FriendCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
+    
 }

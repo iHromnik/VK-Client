@@ -11,5 +11,11 @@ import UIKit
 struct Friend {
     let name: String
     let avatar: UIImage?
-   // let image: UIImage?
+    let image: UIImage?
+}
+
+
+struct Group {
+    let name: String
+    let avatar: UIImage?
 }
