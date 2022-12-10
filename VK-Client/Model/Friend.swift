@@ -11,7 +11,7 @@ import UIKit
 struct Friend {
     let name: String
     let avatar: UIImage?
-    let image: UIImage?
+    let photo: UIImage?
 }
 
 

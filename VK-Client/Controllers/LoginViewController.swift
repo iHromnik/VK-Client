@@ -7,9 +7,6 @@
 
 import UIKit
 
-
-
-
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
@@ -18,15 +15,11 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordtextField: UITextField!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let tapGR = UITapGestureRecognizer(target: self, action: #selector(hideScrean))
         view.addGestureRecognizer(tapGR)
-        
-
     }
     
     @objc func hideScrean() {
@@ -51,9 +44,6 @@ class LoginViewController: UIViewController {
     @objc func willHideKeyBoard(_ notification: Notification) {
         scrollView.contentInset = .zero
     }
-    
- 
-    
     
     @IBAction func loginButten(_ sender: Any) {
         guard let username = usernameTextField.text,

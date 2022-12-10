@@ -7,9 +7,7 @@
 
 import UIKit
 
-class NewGroupCell: UITableViewCell {
-
-    
+class NewGroupCell: UITableViewCell {    
     
     @IBOutlet weak var imagesView: UIImageView!
     

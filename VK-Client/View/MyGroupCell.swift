@@ -8,7 +8,6 @@
 import UIKit
 
 class MyGroupCell: UITableViewCell {
-
     
     @IBOutlet weak var imagesView: UIImageView!
     

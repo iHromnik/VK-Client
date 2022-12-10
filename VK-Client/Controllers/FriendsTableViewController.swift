@@ -12,16 +12,16 @@ class FriendsTableViewController: UITableViewController {
     
     
     let friends = [
-        Friend(name: "Алексей Макаров", avatar: UIImage.init(named: "AMava"), image: UIImage(named: "AM1")),
-        Friend(name: "Павел Мосейчук", avatar: UIImage.init(named: "PMava"), image: UIImage(named: "PM1")),
-        Friend(name: "Роман Шехоткин", avatar: UIImage.init(named: "RSava"), image: UIImage(named: "RS1")),
-        Friend(name: "Надежда Зименко", avatar: UIImage.init(named: "NZava"), image: UIImage(named: "NZ1")),
-        Friend(name: "Николай Маркин", avatar: UIImage.init(named: "NMava"), image: UIImage(named: "NM1")),
-        Friend(name: "Ольга Тодоратьева", avatar: UIImage.init(named: "OTava"), image: UIImage(named: "OT1")),
-        Friend(name: "Артем Рапацевич", avatar: UIImage.init(named: "ARava"), image: UIImage(named: "AR1")),
-        Friend(name: "Виталий Виноградов", avatar: UIImage.init(named: "VVava"), image: UIImage(named: "VV1")),
-        Friend(name: "Сергей Голубенко", avatar: UIImage.init(named: "SGava"), image: UIImage(named: "SG1")),
-        Friend(name: "Сергей Щербаков", avatar: UIImage.init(named: "SSava"), image: UIImage(named: "SS1"))
+        Friend(name: "Алексей Макаров", avatar: UIImage.init(named: "AMava"), photo: UIImage(named: "AM1")),
+        Friend(name: "Павел Мосейчук", avatar: UIImage.init(named: "PMava"), photo: UIImage(named: "PM1")),
+        Friend(name: "Роман Шехоткин", avatar: UIImage.init(named: "RSava"), photo: UIImage(named: "RS1")),
+        Friend(name: "Надежда Зименко", avatar: UIImage.init(named: "NZava"), photo: UIImage(named: "NZ1")),
+        Friend(name: "Николай Маркин", avatar: UIImage.init(named: "NMava"), photo: UIImage(named: "NM1")),
+        Friend(name: "Ольга Тодоратьева", avatar: UIImage.init(named: "OTava"), photo: UIImage(named: "OT1")),
+        Friend(name: "Артем Рапацевич", avatar: UIImage.init(named: "ARava"), photo: UIImage(named: "AR1")),
+        Friend(name: "Виталий Виноградов", avatar: UIImage.init(named: "VVava"), photo: UIImage(named: "VV1")),
+        Friend(name: "Сергей Голубенко", avatar: UIImage.init(named: "SGava"), photo: UIImage(named: "SG1")),
+        Friend(name: "Сергей Щербаков", avatar: UIImage.init(named: "SSava"), photo: UIImage(named: "SS1"))
     ]
     
     
@@ -64,10 +64,11 @@ class FriendsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PhotoFriend",
            let destinationVC = segue.destination as? FriendCollectionViewController,
-           let indexPath = tableView.indexPathForSelectedRow
-        {
-            destinationVC.photo = friends[indexPath.row].image
-
+           let indexPath = tableView.indexPathForSelectedRow {
+            
+            destinationVC.title = friends[indexPath.row].name
+            destinationVC.photo = friends[indexPath.row].photo
+    
         }
     }
 

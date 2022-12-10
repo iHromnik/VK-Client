@@ -11,6 +11,7 @@ private let reuseIdentifier = "Cell"
 
 class FriendCollectionViewController: UICollectionViewController {
     
+    
     var photo: UIImage?
 
     override func viewDidLoad() {
@@ -31,7 +32,7 @@ class FriendCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
         
-        return 1
+        return 6
     }
 
    
@@ -41,7 +42,7 @@ class FriendCollectionViewController: UICollectionViewController {
             preconditionFailure("CollectionCell Error")
         }
         
-        cell.imageView.image = photo
+        cell.photoFriend.image = photo
     
         return cell
     }
