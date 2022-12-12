@@ -18,8 +18,6 @@ class FriendCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
 
 
@@ -30,8 +28,6 @@ class FriendCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
-        
         return 6
     }
 

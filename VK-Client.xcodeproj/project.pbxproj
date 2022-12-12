@@ -19,6 +19,7 @@
 		30926E64293BB79B00E17EF3 /* NewGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30926E63293BB79B00E17EF3 /* NewGroupCell.swift */; };
 		30926E68293BB84600E17EF3 /* MyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30926E67293BB84600E17EF3 /* MyGroupCell.swift */; };
 		3093A09D2937E91800178491 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093A09C2937E91800178491 /* UIViewController + Extension.swift */; };
+		30DCD3FF29479A2E00BA68FE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD3FE29479A2E00BA68FE /* GradientView.swift */; };
 		30F4A8A92930E9BE00BCC532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */; };
 		30F4A8AB2930E9BE00BCC532 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8AA2930E9BE00BCC532 /* SceneDelegate.swift */; };
 		30F4A8AD2930E9BE00BCC532 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8AC2930E9BE00BCC532 /* LoginViewController.swift */; };
@@ -60,6 +61,7 @@
 		30926E63293BB79B00E17EF3 /* NewGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupCell.swift; sourceTree = "<group>"; };
 		30926E67293BB84600E17EF3 /* MyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCell.swift; sourceTree = "<group>"; };
 		3093A09C2937E91800178491 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		30DCD3FE29479A2E00BA68FE /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		30F4A8A52930E9BE00BCC532 /* VK-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30F4A8AA2930E9BE00BCC532 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				30926E63293BB79B00E17EF3 /* NewGroupCell.swift */,
 				30926E67293BB84600E17EF3 /* MyGroupCell.swift */,
 				308BAF2A2944CECA006BDF0F /* AvatarView.swift */,
+				30DCD3FE29479A2E00BA68FE /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				300DAFE7293B675400287535 /* Friend.swift in Sources */,
 				300DAFE9293B83D900287535 /* FriendCollectionViewController.swift in Sources */,
 				30926E62293BAFF800E17EF3 /* NewGroupTableViewController.swift in Sources */,
+				30DCD3FF29479A2E00BA68FE /* GradientView.swift in Sources */,
 				30F4A8A92930E9BE00BCC532 /* AppDelegate.swift in Sources */,
 				308BAF2F2944F747006BDF0F /* LikeControl.swift in Sources */,
 				3093A09D2937E91800178491 /* UIViewController + Extension.swift in Sources */,

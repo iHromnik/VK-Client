@@ -16,18 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VKicon" translatesAutoresizingMaskIntoConstraints="NO" id="YQf-Ps-xGh">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" red="0.023766340850000001" green="0.042736865280000001" blue="0.057247031640000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kws-kF-D5s">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VKicon" translatesAutoresizingMaskIntoConstraints="NO" id="YQf-Ps-xGh">
+                                        <rect key="frame" x="0.0" y="-86" width="393" height="1024"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.035825062540000001" green="0.058461613949999998" blue="0.078434221449999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="YQf-Ps-xGh" firstAttribute="centerY" secondItem="Kws-kF-D5s" secondAttribute="centerY" id="91e-Hy-jKA"/>
+                                    <constraint firstItem="YQf-Ps-xGh" firstAttribute="centerX" secondItem="Kws-kF-D5s" secondAttribute="centerX" id="xAt-OJ-kzM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YQf-Ps-xGh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1Li-7S-0sY"/>
-                            <constraint firstItem="YQf-Ps-xGh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rfb-D0-8GQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YQf-Ps-xGh" secondAttribute="trailing" id="dRq-Qd-VSS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YQf-Ps-xGh" secondAttribute="bottom" id="gkH-4Q-K1S"/>
+                            <constraint firstAttribute="trailing" secondItem="Kws-kF-D5s" secondAttribute="trailing" id="AWa-ck-zoa"/>
+                            <constraint firstItem="Kws-kF-D5s" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="F3O-Ae-e2x"/>
+                            <constraint firstAttribute="bottom" secondItem="Kws-kF-D5s" secondAttribute="bottom" id="IVC-Vz-wW6"/>
+                            <constraint firstItem="YQf-Ps-xGh" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="wh4-b9-8g1"/>
+                            <constraint firstItem="Kws-kF-D5s" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="xUo-cl-Zdw"/>
                         </constraints>
                     </view>
                 </viewController>
