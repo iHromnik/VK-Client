@@ -19,6 +19,8 @@
 		30926E64293BB79B00E17EF3 /* NewGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30926E63293BB79B00E17EF3 /* NewGroupCell.swift */; };
 		30926E68293BB84600E17EF3 /* MyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30926E67293BB84600E17EF3 /* MyGroupCell.swift */; };
 		3093A09D2937E91800178491 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093A09C2937E91800178491 /* UIViewController + Extension.swift */; };
+		30C489ED295B19E800AB93C9 /* FriendGroupXIBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C489EB295B19E800AB93C9 /* FriendGroupXIBCell.swift */; };
+		30C489EE295B19E800AB93C9 /* FriendGroupXIBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C489EC295B19E800AB93C9 /* FriendGroupXIBCell.xib */; };
 		30DCD3FF29479A2E00BA68FE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD3FE29479A2E00BA68FE /* GradientView.swift */; };
 		30F4A8A92930E9BE00BCC532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */; };
 		30F4A8AB2930E9BE00BCC532 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8AA2930E9BE00BCC532 /* SceneDelegate.swift */; };
@@ -61,6 +63,8 @@
 		30926E63293BB79B00E17EF3 /* NewGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupCell.swift; sourceTree = "<group>"; };
 		30926E67293BB84600E17EF3 /* MyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupCell.swift; sourceTree = "<group>"; };
 		3093A09C2937E91800178491 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		30C489EB295B19E800AB93C9 /* FriendGroupXIBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendGroupXIBCell.swift; sourceTree = "<group>"; };
+		30C489EC295B19E800AB93C9 /* FriendGroupXIBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendGroupXIBCell.xib; sourceTree = "<group>"; };
 		30DCD3FE29479A2E00BA68FE /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		30F4A8A52930E9BE00BCC532 /* VK-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,8 +120,8 @@
 		300DAFED293B896400287535 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				30F4A8AC2930E9BE00BCC532 /* LoginViewController.swift */,
 				300DAFE2293B63A000287535 /* FriendsTableViewController.swift */,
+				30F4A8AC2930E9BE00BCC532 /* LoginViewController.swift */,
 				300DAFE8293B83D900287535 /* FriendCollectionViewController.swift */,
 				30926E5F293BAFE700E17EF3 /* MyGroupTableViewController.swift */,
 				30926E61293BAFF800E17EF3 /* NewGroupTableViewController.swift */,
@@ -155,6 +159,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		30C489EA295B199200AB93C9 /* XIBCell */ = {
+			isa = PBXGroup;
+			children = (
+				30C489EB295B19E800AB93C9 /* FriendGroupXIBCell.swift */,
+				30C489EC295B19E800AB93C9 /* FriendGroupXIBCell.xib */,
+			);
+			path = XIBCell;
+			sourceTree = "<group>";
+		};
 		30F4A89C2930E9BE00BCC532 = {
 			isa = PBXGroup;
 			children = (
@@ -179,12 +192,13 @@
 		30F4A8A72930E9BE00BCC532 /* VK-Client */ = {
 			isa = PBXGroup;
 			children = (
+				30F4A8AE2930E9BE00BCC532 /* Main.storyboard */,
+				30C489EA295B199200AB93C9 /* XIBCell */,
 				300DAFEC293B893800287535 /* Resourse */,
 				300DAFED293B896400287535 /* Controllers */,
 				300DAFEE293B897500287535 /* Helper */,
 				300DAFEF293B898400287535 /* View */,
 				300DAFF0293B899D00287535 /* Model */,
-				30F4A8AE2930E9BE00BCC532 /* Main.storyboard */,
 			);
 			path = "VK-Client";
 			sourceTree = "<group>";
@@ -313,6 +327,7 @@
 				30F4A8B52930E9C000BCC532 /* LaunchScreen.storyboard in Resources */,
 				30F4A8B22930E9C000BCC532 /* Assets.xcassets in Resources */,
 				30F4A8B02930E9BE00BCC532 /* Main.storyboard in Resources */,
+				30C489EE295B19E800AB93C9 /* FriendGroupXIBCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30926E64293BB79B00E17EF3 /* NewGroupCell.swift in Sources */,
+				30C489ED295B19E800AB93C9 /* FriendGroupXIBCell.swift in Sources */,
 				30F4A8AD2930E9BE00BCC532 /* LoginViewController.swift in Sources */,
 				30926E68293BB84600E17EF3 /* MyGroupCell.swift in Sources */,
 				300DAFE7293B675400287535 /* Friend.swift in Sources */,
