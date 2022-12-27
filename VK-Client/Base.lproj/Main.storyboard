@@ -372,9 +372,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="RVT-16-quq">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="t39-xE-u28" id="djx-xg-JPb"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewGroupCell" rowHeight="123" id="eQm-9s-2O3" customClass="NewGroupCell" customModule="VK_Client" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="414" height="123"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="123"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eQm-9s-2O3" id="zQq-o5-KpY">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="123"/>
@@ -416,6 +424,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="New group" id="JTa-P3-F3J"/>
+                    <connections>
+                        <outlet property="searchBarGroup" destination="RVT-16-quq" id="LNr-FO-G4V"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYy-4S-ZSA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Gaz-6A-DHy" userLabel="Exit" sceneMemberID="exit"/>

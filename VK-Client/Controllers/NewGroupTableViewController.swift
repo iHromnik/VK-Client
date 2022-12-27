@@ -9,6 +9,13 @@ import UIKit
 
 class NewGroupTableViewController: UITableViewController {
     
+    @IBOutlet weak var searchBarGroup: UISearchBar! {
+        didSet{
+            searchBarGroup.delegate = self
+        }
+    }
+    
+    var searchGroup = [Group]()
     
     let groups = [
         Group(name: "wilsacom new", avatar: UIImage.init(named: "groupAva/wilsacom new")),
@@ -23,8 +30,13 @@ class NewGroupTableViewController: UITableViewController {
         Group(name: "Интеллектуариум", avatar: UIImage.init(named: "groupAva/Интеллектуариум"))
     ]
     
+
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.register(UINib(nibName: "FriendGroupXIBCell", bundle: nil), forCellReuseIdentifier: "FriendGroupXIBCell")
+       
+        searchGroup = groups
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -32,7 +44,7 @@ class NewGroupTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return groups.count
+        return searchGroup.count
     }
 
     
@@ -41,13 +53,23 @@ class NewGroupTableViewController: UITableViewController {
             preconditionFailure("Error")
         }
 
-        cell.avatarImage.image = groups[indexPath.row].avatar
-        cell.lableName.text = groups[indexPath.row].name
+        cell.avatarImage.image = searchGroup[indexPath.row].avatar
+        cell.lableName.text = searchGroup[indexPath.row].name
 
         return cell
     }
-    
 
-    
+}
 
+extension NewGroupTableViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+        if searchText.isEmpty {
+            searchGroup = groups
+        } else {
+            searchGroup = groups.filter{$0.name.contains(searchText)}
+            
+        }
+        tableView.reloadData()
+    }
 }
