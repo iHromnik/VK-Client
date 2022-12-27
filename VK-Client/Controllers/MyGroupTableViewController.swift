@@ -11,7 +11,10 @@ class MyGroupTableViewController: UITableViewController {
     
     var myGroup: [Group] = []
     
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.register(UINib(nibName: "FriendGroupXIBCell", bundle: nil), forCellReuseIdentifier: "FriendGroupXIBCell")
+    }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -22,12 +25,12 @@ class MyGroupTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupCell", for: indexPath) as? MyGroupCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "FriendGroupXIBCell", for: indexPath) as? FriendGroupXIBCell else {
             preconditionFailure("Error")
         }
 
-        cell.imagesView.image = myGroup[indexPath.row].avatar
-        cell.lableView.text = myGroup[indexPath.row].name
+        cell.avatarImage.image = myGroup[indexPath.row].avatar
+        cell.lableName.text = myGroup[indexPath.row].name
 
         return cell
     }
@@ -41,19 +44,38 @@ class MyGroupTableViewController: UITableViewController {
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "unwind" {
+            if let destination = segue.destination as? NewGroupTableViewController {
+                destination.newGroupDeleget = self
+            }
+        }
+    }
     
+//    @IBAction func addSelectedGroup(segue: UIStoryboardSegue) {
+//      if  let sourceVC = segue.source as? NewGroupTableViewController,
+//          let indexPath = sourceVC.tableView.indexPathForSelectedRow {
+//          let group = sourceVC.groups[indexPath.row]
+//          if !myGroup.contains(where: {$0.name == group.name}){
+//              myGroup.append(group)
+//              tableView.reloadData()
+//          }
+//
+//      }
+//
+//    }
     
-    @IBAction func addSelectedGroup(segue: UIStoryboardSegue) {
-      if  let sourceVC = segue.source as? NewGroupTableViewController,
-          let indexPath = sourceVC.tableView.indexPathForSelectedRow {
-          let group = sourceVC.groups[indexPath.row]
-          if !myGroup.contains(where: {$0.name == group.name}){
-              myGroup.append(group)
-              tableView.reloadData()
-          }
-          
-      }
+}
+
+extension MyGroupTableViewController: NewGroupDelegate {
+    func getNewGroup(group: Group) {
+        
+        if !myGroup.contains(where: {$0.name == group.name}){
+            myGroup.append(group)
+            tableView.reloadData()
+        }
         
     }
+    
     
 }

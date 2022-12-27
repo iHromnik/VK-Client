@@ -21,6 +21,9 @@
 		3093A09D2937E91800178491 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093A09C2937E91800178491 /* UIViewController + Extension.swift */; };
 		30C489ED295B19E800AB93C9 /* FriendGroupXIBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C489EB295B19E800AB93C9 /* FriendGroupXIBCell.swift */; };
 		30C489EE295B19E800AB93C9 /* FriendGroupXIBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C489EC295B19E800AB93C9 /* FriendGroupXIBCell.xib */; };
+		30D93605295B434E00DA4942 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D93603295B434E00DA4942 /* NewsCollectionViewCell.swift */; };
+		30D93606295B434E00DA4942 /* NewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30D93604295B434E00DA4942 /* NewsCollectionViewCell.xib */; };
+		30D93608295B5A9F00DA4942 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D93607295B5A9F00DA4942 /* NewsViewController.swift */; };
 		30DCD3FF29479A2E00BA68FE /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30DCD3FE29479A2E00BA68FE /* GradientView.swift */; };
 		30F4A8A92930E9BE00BCC532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */; };
 		30F4A8AB2930E9BE00BCC532 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F4A8AA2930E9BE00BCC532 /* SceneDelegate.swift */; };
@@ -65,6 +68,9 @@
 		3093A09C2937E91800178491 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		30C489EB295B19E800AB93C9 /* FriendGroupXIBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendGroupXIBCell.swift; sourceTree = "<group>"; };
 		30C489EC295B19E800AB93C9 /* FriendGroupXIBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendGroupXIBCell.xib; sourceTree = "<group>"; };
+		30D93603295B434E00DA4942 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		30D93604295B434E00DA4942 /* NewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCollectionViewCell.xib; sourceTree = "<group>"; };
+		30D93607295B5A9F00DA4942 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		30DCD3FE29479A2E00BA68FE /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		30F4A8A52930E9BE00BCC532 /* VK-Client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-Client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		30F4A8A82930E9BE00BCC532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 				30926E5F293BAFE700E17EF3 /* MyGroupTableViewController.swift */,
 				30926E61293BAFF800E17EF3 /* NewGroupTableViewController.swift */,
 				308BAF2E2944F747006BDF0F /* LikeControl.swift */,
+				30D93607295B5A9F00DA4942 /* NewsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +171,8 @@
 			children = (
 				30C489EB295B19E800AB93C9 /* FriendGroupXIBCell.swift */,
 				30C489EC295B19E800AB93C9 /* FriendGroupXIBCell.xib */,
+				30D93603295B434E00DA4942 /* NewsCollectionViewCell.swift */,
+				30D93604295B434E00DA4942 /* NewsCollectionViewCell.xib */,
 			);
 			path = XIBCell;
 			sourceTree = "<group>";
@@ -327,6 +336,7 @@
 				30F4A8B52930E9C000BCC532 /* LaunchScreen.storyboard in Resources */,
 				30F4A8B22930E9C000BCC532 /* Assets.xcassets in Resources */,
 				30F4A8B02930E9BE00BCC532 /* Main.storyboard in Resources */,
+				30D93606295B434E00DA4942 /* NewsCollectionViewCell.xib in Resources */,
 				30C489EE295B19E800AB93C9 /* FriendGroupXIBCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,6 +369,8 @@
 				300DAFE7293B675400287535 /* Friend.swift in Sources */,
 				300DAFE9293B83D900287535 /* FriendCollectionViewController.swift in Sources */,
 				30926E62293BAFF800E17EF3 /* NewGroupTableViewController.swift in Sources */,
+				30D93608295B5A9F00DA4942 /* NewsViewController.swift in Sources */,
+				30D93605295B434E00DA4942 /* NewsCollectionViewCell.swift in Sources */,
 				30DCD3FF29479A2E00BA68FE /* GradientView.swift in Sources */,
 				30F4A8A92930E9BE00BCC532 /* AppDelegate.swift in Sources */,
 				308BAF2F2944F747006BDF0F /* LikeControl.swift in Sources */,

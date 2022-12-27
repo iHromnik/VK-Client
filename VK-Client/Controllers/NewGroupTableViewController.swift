@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol NewGroupDelegate: AnyObject {
+    func getNewGroup(group: Group)
+}
+
 class NewGroupTableViewController: UITableViewController {
     
     @IBOutlet weak var searchBarGroup: UISearchBar! {
@@ -14,6 +18,7 @@ class NewGroupTableViewController: UITableViewController {
             searchBarGroup.delegate = self
         }
     }
+    weak var newGroupDeleget: NewGroupDelegate?
     
     var searchGroup = [Group]()
     
@@ -58,6 +63,14 @@ class NewGroupTableViewController: UITableViewController {
 
         return cell
     }
+    
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       // print("нажата строка No \(indexPath.row) в секции \(indexPath.section)")
+        newGroupDeleget?.getNewGroup(group: groups[indexPath.row])
+            navigationController?.popViewController(animated: true)
+    }
 
 }
 
@@ -73,3 +86,5 @@ extension NewGroupTableViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
 }
+
+
