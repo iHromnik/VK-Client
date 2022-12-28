@@ -8,14 +8,7 @@
 import UIKit
 
 class NewsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    
-    
-    
-    
-   
-    
-
+ 
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet{
             collectionView.delegate = self
@@ -31,7 +24,7 @@ class NewsViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -40,13 +33,11 @@ class NewsViewController: UIViewController, UICollectionViewDataSource, UICollec
             preconditionFailure("Error")
         }
         
-        
-        cell.avatarImage.image = UIImage(systemName: "a.circle")
-        cell.labelName.text = "rfwerfewf"
-        cell.labelTime.text = "12.12.12"
-        cell.labelMain.text = "uihiughysdasdasdsasdasdsadsadasdsadsdasdasdguyg"
-        cell.mainImage.image = UIImage(named: "VKicon")
-        
+        cell.avatarImage.image = UIImage(named: "groupAva/Тату рай")
+        cell.mainImage.image = UIImage(named: "tato")
+        cell.mainLable.text = "Отлично выглядит"
+        cell.nameLable.text = "Ilon Mask"
+        cell.detaLable.text = "28.12.2022"
         return cell
     }
     
