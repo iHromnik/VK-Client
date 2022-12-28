@@ -27,9 +27,9 @@ class NewGroupTableViewController: UITableViewController {
         Group(name: "Халява AppStore", avatar: UIImage.init(named: "groupAva/Халява AppStore")),
         Group(name: "Wylsacom", avatar: UIImage.init(named: "groupAva/Wylsacom")),
         Group(name: "iRepService", avatar: UIImage.init(named: "groupAva/iRepService")),
-        Group(name: "Чоткий паца", avatar: UIImage.init(named: "groupAva/Чоткий паца")),
+        Group(name: "Чоткий паца", avatar: UIImage.init(named: "groupAva/Чотки паца")),
         Group(name: "Begin English", avatar: UIImage.init(named: "groupAva/Begin English")),
-        Group(name: "Тату рай", avatar: UIImage.init(named: "groupAva/Тату рай")),
+        Group(name: "Тату рай", avatar: UIImage.init(named: "groupAva/Тату раи")),
         Group(name: "Мизантроп", avatar: UIImage.init(named: "groupAva/Мизантроп")),
         Group(name: "Интересные факты", avatar: UIImage.init(named: "groupAva/Интересные факты")),
         Group(name: "Интеллектуариум", avatar: UIImage.init(named: "groupAva/Интеллектуариум"))

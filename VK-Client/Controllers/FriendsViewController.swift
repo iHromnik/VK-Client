@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FriendsTableViewController: UITableViewController {
+class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     
@@ -25,6 +25,14 @@ class FriendsTableViewController: UITableViewController {
     ]
     
     
+    @IBOutlet  var tableView: UITableView! {
+        didSet {
+            tableView.dataSource = self
+            tableView.delegate = self
+        }
+    }
+    
+    
     var sortedFriends = [Character : [Friend]]()
     
     
@@ -33,6 +41,7 @@ class FriendsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sortedFriends = sort(friends: friends)
+        tableView.register(UINib(nibName: "FriendGroupXIBCell", bundle: nil), forCellReuseIdentifier: "FriendGroupXIBCell")
         
     }
     
@@ -59,11 +68,12 @@ class FriendsTableViewController: UITableViewController {
     
     
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return sortedFriends.keys.count
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         let keySorted = sortedFriends.keys.sorted()
         let friends = sortedFriends[keySorted[section]]?.count ?? 0
@@ -71,8 +81,8 @@ class FriendsTableViewController: UITableViewController {
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard  let cell = tableView.dequeueReusableCell(withIdentifier: "FriendTableCell", for: indexPath) as? FriendTableCell else {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard  let cell = tableView.dequeueReusableCell(withIdentifier: "FriendGroupXIBCell", for: indexPath) as? FriendGroupXIBCell else {
             preconditionFailure("FriendsCell Error")
         }
 
@@ -81,13 +91,13 @@ class FriendsTableViewController: UITableViewController {
         let friend: Friend = friends[indexPath.row]
         
         
-        cell.lableFriendCell.text = friend.name
-        cell.imageFriendCell.image = friend.avatar
+        cell.lableName.text = friend.name
+        cell.avatarImage.image = friend.avatar
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         String(sortedFriends.keys.sorted()[section])
     }
     
@@ -95,11 +105,14 @@ class FriendsTableViewController: UITableViewController {
         if segue.identifier == "PhotoFriend",
            let destinationVC = segue.destination as? FriendCollectionViewController,
            let indexPath = tableView.indexPathForSelectedRow {
-            
+
             destinationVC.title = friends[indexPath.row].name
             destinationVC.photo = friends[indexPath.row].photo
-    
+
         }
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "PhotoFriend", sender: nil)
+    }
 }
