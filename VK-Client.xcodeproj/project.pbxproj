@@ -17,6 +17,7 @@
 		30926E60293BAFE700E17EF3 /* MyGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30926E5F293BAFE700E17EF3 /* MyGroupTableViewController.swift */; };
 		30926E62293BAFF800E17EF3 /* NewGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30926E61293BAFF800E17EF3 /* NewGroupTableViewController.swift */; };
 		3093A09D2937E91800178491 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3093A09C2937E91800178491 /* UIViewController + Extension.swift */; };
+		30B9948F296EFD5000141B6E /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B9948E296EFD5000141B6E /* Session.swift */; };
 		30C489ED295B19E800AB93C9 /* FriendGroupXIBCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C489EB295B19E800AB93C9 /* FriendGroupXIBCell.swift */; };
 		30C489EE295B19E800AB93C9 /* FriendGroupXIBCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30C489EC295B19E800AB93C9 /* FriendGroupXIBCell.xib */; };
 		30D93605295B434E00DA4942 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D93603295B434E00DA4942 /* NewsCollectionViewCell.swift */; };
@@ -62,6 +63,7 @@
 		30926E5F293BAFE700E17EF3 /* MyGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewController.swift; sourceTree = "<group>"; };
 		30926E61293BAFF800E17EF3 /* NewGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupTableViewController.swift; sourceTree = "<group>"; };
 		3093A09C2937E91800178491 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		30B9948E296EFD5000141B6E /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		30C489EB295B19E800AB93C9 /* FriendGroupXIBCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendGroupXIBCell.swift; sourceTree = "<group>"; };
 		30C489EC295B19E800AB93C9 /* FriendGroupXIBCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendGroupXIBCell.xib; sourceTree = "<group>"; };
 		30D93603295B434E00DA4942 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				3093A09C2937E91800178491 /* UIViewController + Extension.swift */,
+				30B9948E296EFD5000141B6E /* Session.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				30D93608295B5A9F00DA4942 /* NewsViewController.swift in Sources */,
 				30D93605295B434E00DA4942 /* NewsCollectionViewCell.swift in Sources */,
 				30DCD3FF29479A2E00BA68FE /* GradientView.swift in Sources */,
+				30B9948F296EFD5000141B6E /* Session.swift in Sources */,
 				30F4A8A92930E9BE00BCC532 /* AppDelegate.swift in Sources */,
 				308BAF2F2944F747006BDF0F /* LikeControl.swift in Sources */,
 				3093A09D2937E91800178491 /* UIViewController + Extension.swift in Sources */,
